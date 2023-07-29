@@ -1,13 +1,14 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Project from './components/Project'
+import Skill from './components/Skill'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <main className='bg-white'>
-      <nav className='bg-rose-500 w-full top-0 font-semibold flex flex-row justify-between p-8 drop-shadow-md fixed z-10'>
+      <nav className='bg-rose-500 w-full top-0 font-semibold flex flex-row justify-between p-8 drop-shadow-md'>
         <h1 className='font-extrabold text-lg'>Abelardo Sobarzo</h1>
         <ul className='flex flex-row'>
           <a href='#about-me'>
@@ -21,7 +22,7 @@ export default function Home() {
           </a>
         </ul> 
       </nav>
-      <section id='about-me' className='flex flex-col items-center justify-center min-h-screen drop-shadow-lg m-4'>
+      <section id='about-me' className='flex flex-col items-center justify-center min-h-min drop-shadow-lg space-y-8'>
         <div className='font-extrabold mt-'>
           <h1 className='text-6xl font-bold text-black drop-shadow-sm'>
             About Me
@@ -46,17 +47,77 @@ export default function Home() {
             />
           </div>
         </div>
+        <div className='flex flex-col'>
+          <h1 className='text-6xl font-bold text-black drop-shadow-sm'>
+            Skills
+          </h1>
+          <div className='flex flex-row'>
+            <div className='flex flex-col m-9'>
+              <h1 className='text-4xl font-bold text-black drop-shadow-sm'>
+                Languages
+              </h1>
+              <ul className='text-2xl font-semibold text-black drop-shadow-sm'>
+                <Skill
+                  image='/../public/skills/python.jpeg'
+                  alt='Python'
+                  title='Python'
+                  color='rgba(248, 255, 91, 1)'
+                  className='border-r-2'
+                ></Skill>
+              </ul>
+            </div>
+            <div className='flex flex-col m-9'>
+              <h1 className='text-4xl font-bold text-black drop-shadow-sm'>
+                Frameworks
+              </h1>
+              <ul className='text-2xl font-semibold text-black drop-shadow-sm'>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Flask</li>
+                <li>Bootstrap</li>
+              </ul>
+            </div>
+            <div className='flex flex-col m-9'>
+              <h1 className='text-4xl font-bold text-black drop-shadow-sm'>
+                Tools
+              </h1>
+              <ul className='text-2xl font-semibold text-black drop-shadow-sm'>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>VS Code</li>
+                <li>Postman</li>
+                <li>Heroku</li>
+                <li>Netlify</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
-      <section id='projects' className='flex flex-col items-center justify-center min-h-screen drop-shadow-lg'>
+      <section id='projects' className='flex flex-col items-center justify-center min-h-min drop-shadow-lg space-y-8'>
         <h1 className='text-6xl font-bold text-black drop-shadow-sm'>
           Projects
         </h1>
-        <Project
-          image='/../public/website.png'
-          alt='website'
-        ></Project>
+        <div className='mt-7 grid grid-cols-3 gap-4'>
+          <Project
+            image='/../public/projects/nature.png'
+            alt='Nature'
+            title='Nature'
+          />
+          <Project
+            image='/../public/projects/weather.png'
+            alt='Weather'
+            title='Weather'
+          />
+          <Project
+            image='/../public/projects/voyage.png'
+            alt='Voyage'
+            title='Voyage'
+          />
+        </div>
       </section>  
-      <section id='contact' className='flex flex-col items-center justify-center min-h-screen py-2 drop-shadow-lg m-4'>
+      <section id='contact' className='flex flex-col items-center justify-center min-h-min py-2 drop-shadow-lg m-4 space-y-8'>
         <h1 className='text-6xl font-bold text-black drop-shadow-sm'>
           Contact
         </h1>
