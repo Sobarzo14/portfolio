@@ -23,7 +23,7 @@ export default function Home() {
         </ul> 
       </nav>
       <section id='about-me' className='flex flex-col items-center justify-center min-h-min drop-shadow-lg space-y-8'>
-        <div className='font-extrabold mt-'>
+        <div className='font-extrabold'>
           <h1 className='text-6xl font-bold text-black drop-shadow-sm'>
             About Me
           </h1>
@@ -58,10 +58,9 @@ export default function Home() {
               </h1>
               <ul className='text-2xl font-semibold text-black drop-shadow-sm'>
                 <Skill
-                  image='/../public/skills/python.jpeg'
+                  image='/../public/skills/python.png'
                   alt='Python'
                   title='Python'
-                  color='rgba(248, 255, 91, 1)'
                   className='border-r-2'
                 ></Skill>
               </ul>
