@@ -2,6 +2,8 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Project from './components/Project'
 import Skill from './components/Skill'
+import { projects } from './api/projects'
+import { skills } from './api/skills'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,75 +24,42 @@ export default function Home() {
           </a>
         </ul> 
       </nav>
-      <section id='about-me' className='flex flex-col items-center justify-center min-h-min drop-shadow-lg space-y-8'>
-        <div className='font-extrabold'>
-          <h1 className='text-6xl font-bold text-black drop-shadow-sm'>
-            About Me
-          </h1>
-        </div>
-        <div className='flex flex-row'>
-          <div className='flex flex-col m-9'>
-            <h1 className='text-6xl font-bold text-black drop-shadow-sm'>
+      <section id='about-me' className='flex flex-col items-center justify-center min-h-min drop-shadow-lg space-y-8 mt-10 md:mt-0'>
+        <h1 className='text-5xl md:text-6xl font-bold text-black drop-shadow-sm mb-2'>
+          About Me
+        </h1>
+        <div className='flex flex-col md:flex-row items-center justify-center'>
+          <div className='flex flex-col my-0 mx-4'>
+            <div className='m-2'>
+              <Image
+                src='/../public/abelardo.jpeg'
+                alt='Picture of the author'
+                width={400}
+                height={400}
+                className='rounded-md text-black drop-shadow-sm'
+              />
+            </div>
+            <h1 className='text-3xl font-bold text-black drop-shadow-sm text-center'>
               Hello, I'm <span className='text-rose-500'>Abelardo</span>
             </h1> 
-            <p className='text-2xl font-semibold text-black drop-shadow-sm max-w-xl'>
+            <p className='text-lg font-semibold text-center text-black drop-shadow-sm max-w-xl'>
               I'm a software developer studying at the Pennsylvania State University. I'm currently working on a project called <span className='text-rose-500'>PokeDex</span> which is a web application that allows users to search for Pokemon and view their stats.
             </p>
           </div>
-          <div className='m-9'>
-            <Image
-              src='/../public/abelardo.jpeg'
-              alt='Picture of the author'
-              width={400}
-              height={400}
-              className='rounded-md text-black drop-shadow-sm'
-            />
-          </div>
         </div>
-        <div className='flex flex-col'>
-          <h1 className='text-6xl font-bold text-black drop-shadow-sm'>
+        <div className='flex flex-col items-center justify-center'>
+          <h1 className='text-6xl font-bold text-black drop-shadow-sm shadow-pup'>
             Skills
           </h1>
-          <div className='flex flex-row'>
-            <div className='flex flex-col m-9'>
-              <h1 className='text-4xl font-bold text-black drop-shadow-sm'>
-                Languages
-              </h1>
-              <ul className='text-2xl font-semibold text-black drop-shadow-sm'>
-                <Skill
-                  image='/../public/skills/python.png'
-                  alt='Python'
-                  title='Python'
-                  className='border-r-2'
-                ></Skill>
-              </ul>
-            </div>
-            <div className='flex flex-col m-9'>
-              <h1 className='text-4xl font-bold text-black drop-shadow-sm'>
-                Frameworks
-              </h1>
-              <ul className='text-2xl font-semibold text-black drop-shadow-sm'>
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>Flask</li>
-                <li>Bootstrap</li>
-              </ul>
-            </div>
-            <div className='flex flex-col m-9'>
-              <h1 className='text-4xl font-bold text-black drop-shadow-sm'>
-                Tools
-              </h1>
-              <ul className='text-2xl font-semibold text-black drop-shadow-sm'>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>VS Code</li>
-                <li>Postman</li>
-                <li>Heroku</li>
-                <li>Netlify</li>
-              </ul>
-            </div>
+          <div className='mt-7 grid grid-cols-3 gap-6'>
+            { skills.map((skill) => (
+              <Skill
+                image={skill.image}
+                alt={skill.alt}
+                title={skill.title}
+                color={skill.color}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -99,21 +68,15 @@ export default function Home() {
           Projects
         </h1>
         <div className='mt-7 grid grid-cols-3 gap-4'>
-          <Project
-            image='/../public/projects/nature.png'
-            alt='Nature'
-            title='Nature'
-          />
-          <Project
-            image='/../public/projects/weather.png'
-            alt='Weather'
-            title='Weather'
-          />
-          <Project
-            image='/../public/projects/voyage.png'
-            alt='Voyage'
-            title='Voyage'
-          />
+          {
+            projects.map((project) => (
+              <Project
+                image={project.image}
+                alt={project.alt}
+                title={project.title}
+              />
+            ))
+          }
         </div>
       </section>  
       <section id='contact' className='flex flex-col items-center justify-center min-h-min py-2 drop-shadow-lg m-4 space-y-8'>

@@ -2,15 +2,15 @@ import Image from "next/image";
 
 export default function Skill(props) {
     return (
-        <div className="flex flex-col min-w-full w-full min-h-fit rounded-3xl drop-shadow-[0_35px_35px_{props.color}]">
+        <div className={`flex flex-col justify-center items-center min-w-full w-full min-h-fit rounded-lg shadow-md ${props.color} p-4`}>
             <Image
                 src={props.image}
                 alt={props.alt}
-                width={200}
-                height={200}
-                className="border-r-2"
+                width={100}
+                height={100}
+                className="rounded-lg m-2"
             />
-            <h1 className="text-xl font-bold text-black drop-shadow-sm text-center">
+            <h1 className="text-xl font-bold text-black text-center">
                 {props.title}
             </h1>
         </div>
