@@ -6,18 +6,6 @@ export const skills = [
         color: 'shadow-yellow-200',
     },
     {
-        image: '/../public/skills/html.png',
-        alt: 'HTML',
-        title: 'HTML',
-        color: 'shadow-orange-300',
-    },
-    {
-        image: '/../public/skills/css.png',
-        alt: 'CSS',
-        title: 'CSS',
-        color: 'shadow-blue-300',
-    },
-    {
         image: '/../public/skills/javascript.png',
         alt: 'JavaScript',
         title: 'JavaScript',

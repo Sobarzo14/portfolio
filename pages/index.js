@@ -1,13 +1,16 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import Project from './components/Project'
 import Skill from './components/Skill'
+import { GrNext, GrPrevious } from 'react-icons/gr'
+import { useState } from 'react'
 import { projects } from './api/projects'
 import { skills } from './api/skills'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
+  const [currentIndex, setIndex] = useState(0);
+  const prevIndex = currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
+  const nextIndex = currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
+
   return (
     <main className='bg-white'>
       <nav className='bg-rose-500 w-full top-0 font-semibold flex flex-row justify-between p-8 drop-shadow-md'>
@@ -51,7 +54,7 @@ export default function Home() {
           <h1 className='text-6xl font-bold text-black drop-shadow-sm shadow-pup'>
             Skills
           </h1>
-          <div className='mt-7 grid grid-cols-3 gap-6'>
+          <div className='mt-7 grid grid-cols-2 gap-10'>
             { skills.map((skill) => (
               <Skill
                 image={skill.image}
@@ -63,23 +66,21 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id='projects' className='flex flex-col items-center justify-center min-h-min drop-shadow-lg space-y-8'>
+      <section id='projects' className='mt-6 flex flex-col items-center justify-center min-h-min drop-shadow-lg'>
         <h1 className='text-6xl font-bold text-black drop-shadow-sm'>
           Projects
         </h1>
-        <div className='mt-7 grid grid-cols-3 gap-4'>
-          {
-            projects.map((project) => (
-              <Project
-                image={project.image}
-                alt={project.alt}
-                title={project.title}
-              />
-            ))
-          }
+        <div className='m-5 flex flex-row items-center justify-center'>
+          <GrPrevious onClick={prevIndex} className='absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-4xl rounded-full p-2 bg-rose-600'/>
+            <Project
+              image={projects[currentIndex].image}
+              alt={projects[currentIndex].alt}
+              title={projects[currentIndex].title}
+            />
+          <GrNext onClick={nextIndex} className='absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 text-4xl rounded-full p-2 bg-rose-600'/>
         </div>
       </section>  
-      <section id='contact' className='flex flex-col items-center justify-center min-h-min py-2 drop-shadow-lg m-4 space-y-8'>
+      <section id='contact' className='mt-6 flex flex-col items-center justify-center min-h-min py-2 drop-shadow-lg m-4 space-y-8'>
         <h1 className='text-6xl font-bold text-black drop-shadow-sm'>
           Contact
         </h1>

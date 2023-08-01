@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Skill(props) {
     return (
-        <div className={`flex flex-col justify-center items-center min-w-full w-full min-h-fit rounded-lg shadow-md ${props.color} p-4`}>
+        <div className={`w-full flex flex-col justify-center items-center min-w-full min-h-fit rounded-lg shadow-md ${props.color} p-4`}>
             <Image
                 src={props.image}
                 alt={props.alt}
