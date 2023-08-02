@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Project from './components/Project'
 import Skill from './components/Skill'
+import Navbar from './components/Navbar'
 import { GrNext, GrPrevious } from 'react-icons/gr'
 import { useState } from 'react'
 import { projects } from './api/projects'
@@ -8,26 +9,17 @@ import { skills } from './api/skills'
 
 export default function Home() {
   const [currentIndex, setIndex] = useState(0);
-  const prevIndex = currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
-  const nextIndex = currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
+  const prevIndex = () => {
+    setIndex(currentIndex === 0 ? projects.length - 1 : currentIndex - 1);
+  }
+  const nextIndex = () => {
+    setIndex(currentIndex === projects.length - 1 ? 0 : currentIndex + 1);
+  }
 
   return (
     <main className='bg-white'>
-      <nav className='bg-rose-500 w-full top-0 font-semibold flex flex-row justify-between p-8 drop-shadow-md'>
-        <h1 className='font-extrabold text-lg'>Abelardo Sobarzo</h1>
-        <ul className='flex flex-row'>
-          <a href='#about-me'>
-            <li className='m-2'>About Me</li>
-          </a>
-          <a href='#projects'>
-            <li className='m-2'>Projects</li>
-          </a>
-          <a href='#contact'>
-            <li className='m-2'>Contact</li>
-          </a>
-        </ul> 
-      </nav>
-      <section id='about-me' className='flex flex-col items-center justify-center min-h-min drop-shadow-lg space-y-8 mt-10 md:mt-0'>
+      <Navbar />
+      <section id='about-me' className='flex flex-col items-center justify-center min-h-min drop-shadow-lg space-y-8 md:mt-0'>
         <h1 className='text-5xl md:text-6xl font-bold text-black drop-shadow-sm mb-2'>
           About Me
         </h1>
