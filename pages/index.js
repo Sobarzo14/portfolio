@@ -6,6 +6,7 @@ import { GrNext, GrPrevious } from 'react-icons/gr'
 import { useState } from 'react'
 import { projects } from './api/projects'
 import { skills } from './api/skills'
+import { contact } from './api/contact'
 
 export default function Home() {
   const [currentIndex, setIndex] = useState(0);
@@ -19,19 +20,19 @@ export default function Home() {
   return (
     <main className='bg-white'>
       <Navbar />
-      <section id='about-me' className='flex flex-col items-center justify-center min-h-min drop-shadow-lg space-y-8 md:mt-0'>
-        <h1 className='text-5xl md:text-6xl font-bold text-black drop-shadow-sm mb-2'>
+      <section id='about-me' className='flex flex-col items-center justify-center min-h-min drop-shadow-lg space-y-8 pt-16 md:mt-0'>
+        <h1 className='text-5xl md:text-6xl font-bold text-black drop-shadow-sm'>
           About Me
         </h1>
         <div className='flex flex-col md:flex-row items-center justify-center'>
           <div className='flex flex-col my-0 mx-4'>
-            <div className='m-2'>
+            <div className='m-0'>
               <Image
                 src='/../public/abelardo.jpeg'
                 alt='Picture of the author'
                 width={400}
                 height={400}
-                className='rounded-md text-black drop-shadow-sm'
+                className='rounded-md text-black drop-shadow-sm mb-8'
               />
             </div>
             <h1 className='text-3xl font-bold text-black drop-shadow-sm text-center'>
@@ -53,6 +54,7 @@ export default function Home() {
                 alt={skill.alt}
                 title={skill.title}
                 color={skill.color}
+                className='m-2'
               />
             ))}
           </div>
@@ -63,19 +65,20 @@ export default function Home() {
           Projects
         </h1>
         <div className='m-5 flex flex-row items-center justify-center'>
-          <GrPrevious onClick={prevIndex} className='absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-4xl rounded-full p-2 bg-rose-600'/>
+          <GrPrevious onClick={prevIndex} className='absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-4xl rounded-full p-2 bg-rose-600/60'/>
             <Project
               image={projects[currentIndex].image}
               alt={projects[currentIndex].alt}
               title={projects[currentIndex].title}
             />
-          <GrNext onClick={nextIndex} className='absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 text-4xl rounded-full p-2 bg-rose-600'/>
+          <GrNext onClick={nextIndex} className='absolute top-[50%] -translate-x-0 translate-y-[50%] right-5 text-4xl rounded-full p-2 bg-rose-600/60'/>
         </div>
       </section>  
       <section id='contact' className='mt-6 flex flex-col items-center justify-center min-h-min py-2 drop-shadow-lg m-4 space-y-8'>
         <h1 className='text-6xl font-bold text-black drop-shadow-sm'>
           Contact
         </h1>
+        <Contact/>
       </section>
     </main>
   )
