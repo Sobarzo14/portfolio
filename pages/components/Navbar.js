@@ -24,8 +24,8 @@ export default function Navbar() {
                 <AiOutlineMenu className='text-3xl text-white m-2' />
             </button>
         </div>
-        <div id='sidebar' className="fixed z-10 inset-y-0 left-0 -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out bg-rose-600 w-64">
-            <nav className='z-10 w-[50%] h-[100%] sticky flex flex-col top-0 font-semibold md:flex justify-between p-8 drop-shadow-md'>
+        <div id='sidebar' className="fixed z-10 inset-y-0 left-0 -translate-x-full md:translate-x-0 transition duration-200 ease-in-out bg-rose-600 w-64 md:w-full md:h-fit">
+            <nav className='z-10 w-[50%] md:w-full h-[100%] sticky flex flex-col top-0 font-semibold md:flex-row justify-between p-8 drop-shadow-md'>
                 <h1 className='font-extrabold text-lg'>Abelardo Sobarzo</h1>
                 <ul className='flex flex-col justify-start md:flex-row'>
                     <a href='#about-me' className="p-2 hover:bg-rose-400 rounded-md">
