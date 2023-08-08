@@ -1,19 +1,19 @@
 export const projects = [
     {
         key: 0,
-        image: '/../public/projects/nature.png',
+        image: '/projects/nature.png',
         alt: 'Nature',
         title: 'Nature',
     },
     {
         key: 1,
-        image: '/../public/projects/weather.png',
+        image: '/projects/weather.png',
         alt: 'Weather',
         title: 'Weather',
     },
     {
         key: 2,
-        image: '/../public/projects/voyage.png',
+        image: '/projects/voyage.png',
         alt: 'Voyage',
         title: 'Voyage',
     },

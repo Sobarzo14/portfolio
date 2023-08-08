@@ -29,7 +29,7 @@ export default function Home() {
         <div className='flex flex-col md:flex-row items-center justify-center'>
             <div className='m-0 md:w-[70%]'>
               <Image
-                src='/../public/abelardo.jpeg'
+                src='/abelardo.jpeg'
                 alt='Picture of the author'
                 width={400}
                 height={400}
