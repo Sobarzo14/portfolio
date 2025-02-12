@@ -17,10 +17,10 @@ function App() {
         <Blog />
         <Contact />
       </main>
-      <footer className="bg-gray-900 text-white py-8">
+      <footer className="bg-raisinblack text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-amber-400 mb-2">Let's create something amazing together</p>
-          <p className="text-gray-400">&copy; {new Date().getFullYear()} John Doe. Fueled by coffee and curiosity.</p>
+          <p className="text-amaranth mb-2">Let's create something amazing together</p>
+          <p className="text-amaranth">&copy; {new Date().getFullYear()} John Doe. Fueled by coffee and curiosity.</p>
         </div>
       </footer>
     </div>

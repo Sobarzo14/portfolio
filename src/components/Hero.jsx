@@ -13,12 +13,12 @@ const Hero = () => {
             <span className="text-lg">code artisan</span>
           </div>
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Hey there! I'm <span className="text-amber-600">John Doe</span>
+            Hey there! I'm <span className="text-amber-600">Abealrdo Sobarzo</span>
             <br />Crafting digital experiences with <Heart className="inline-block text-red-500 mb-2" size={32} />
           </h1>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            When I'm not coding, you'll find me exploring local coffee shops, 
-            capturing moments through photography, and writing about tech and life. 
+            When I'm not coding, you'll find me exploring local coffee shops,
+            capturing moments through photography, and writing about tech and life.
             Let's build something amazing together!
           </p>
           <div className="flex flex-wrap gap-4">
