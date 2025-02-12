@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { BookOpen, Calendar, ArrowRight } from 'lucide-react';
 import { contents } from '../data';
-import { Content as ContentType } from '../types';
 
 const Content = () => {
   const categories = Array.from(new Set(contents.map(content => content.category)));
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedContent, setSelectedContent] = useState<ContentType | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedContent, setSelectedContent] = useState(null);
 
   const filteredContent = selectedCategory === 'all' 
     ? contents 

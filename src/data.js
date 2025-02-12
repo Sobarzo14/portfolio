@@ -1,6 +1,4 @@
-import { Project, BlogPost, Content } from './types';
-
-export const projects: Project[] = [
+export const projects = [
   {
     id: 1,
     title: "Coffee Shop Finder",
@@ -27,7 +25,7 @@ export const projects: Project[] = [
   }
 ];
 
-export const blogPosts: BlogPost[] = [
+export const blogPosts = [
   {
     id: 1,
     title: "Finding Balance: A Developer's Journey with Coffee and Code",
@@ -48,7 +46,7 @@ export const blogPosts: BlogPost[] = [
   }
 ];
 
-export const contents: Content[] = [
+export const contents = [
   {
     id: 1,
     imageUrl: "https://images.unsplash.com/photo-1514539079130-25950c84af65?auto=format&fit=crop&q=80&w=800",
