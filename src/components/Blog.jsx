@@ -16,10 +16,6 @@ const Blog = () => {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <div className="flex items-center text-gray-500 text-sm mb-4">
-                  <Calendar size={16} className="mr-2" />
-                  {post.date}
-                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{post.title}</h3>
                 <p className="text-gray-600 mb-4">{post.excerpt}</p>
                 <div className="flex flex-wrap gap-2 mb-4">

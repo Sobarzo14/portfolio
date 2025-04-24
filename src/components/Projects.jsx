@@ -30,7 +30,7 @@ const Projects = () => {
                 </div>
                 <div className="flex space-x-4">
                   <a
-                    href={project.link}
+                    href={project.code}
                     className="inline-flex items-center text-blue-600 hover:text-blue-700"
                   >
                     <Github className="mr-2" size={20} />

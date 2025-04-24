@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Coffee, MapPin, Camera } from 'lucide-react';
+import { Mail, Coffee, MapPin, Camera, Github } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -9,26 +9,24 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-              Whether you want to discuss a project, grab a coffee, or just chat about 
-              photography – I'd love to hear from you! I'm always open to meeting new 
+              Whether you want to discuss a project or just chat about
+              anything – I'd love to hear from you! I'm always open to meeting new
               people and exploring creative collaborations.
             </p>
             <div className="space-y-6">
               <div className="flex items-center">
                 <Mail className="text-amber-600 mr-4" size={24} />
-                <span className="text-gray-600">hello@johndoe.com</span>
+                <span className="text-gray-600">abelardo.sobarzo.14@gmail.com</span>
               </div>
               <div className="flex items-center">
-                <Coffee className="text-amber-600 mr-4" size={24} />
-                <span className="text-gray-600">Always up for coffee in SF!</span>
-              </div>
-              <div className="flex items-center">
-                <Camera className="text-amber-600 mr-4" size={24} />
-                <span className="text-gray-600">@johndoephotos on Instagram</span>
+                <Github className="text-amber-600 mr-4" size={24} />
+                <a href='https://github.com/Sobarzo14'>
+                  <span className="text-gray-600">Take a look at my GitHub!</span>
+                </a>
               </div>
               <div className="flex items-center">
                 <MapPin className="text-amber-600 mr-4" size={24} />
-                <span className="text-gray-600">San Francisco, CA</span>
+                <span className="text-gray-600">Pittsburgh, PA</span>
               </div>
             </div>
           </div>
