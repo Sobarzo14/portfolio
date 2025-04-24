@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Coffee, Heart, Code } from 'lucide-react';
+import { ArrowRight, Dumbbell, Heart, Code } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -7,19 +7,17 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-32">
         <div className="max-w-3xl">
           <div className="flex items-center gap-2 text-amber-600 mb-4">
-            <Coffee size={24} />
-            <span className="text-lg">Coffee enthusiast & </span>
+            <Dumbbell size={24} />
+            <span className="text-lg">Gym & </span>
             <Code size={24} />
-            <span className="text-lg">code artisan</span>
+            <span className="text-lg">code enthusiast</span>
           </div>
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Hey there! I'm <span className="text-amber-600">Abealrdo Sobarzo</span>
-            <br />Crafting digital experiences with <Heart className="inline-block text-red-500 mb-2" size={32} />
+            Hey there! I'm <span className="text-amber-600">Abelardo Sobarzo</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            When I'm not coding, you'll find me exploring local coffee shops,
-            capturing moments through photography, and writing about tech and life.
-            Let's build something amazing together!
+            I’m passionate about coding, hitting the gym, and dancing. Coding lets me build creative solutions and sharpen my problem-solving skills.
+            The gym is where I push my limits physically, staying disciplined and focused. Dancing brings it all together — it's my way of expressing energy, rhythm, and joy in a way that feels completely free.
           </p>
           <div className="flex flex-wrap gap-4">
             <a

@@ -1,104 +1,48 @@
 export const projects = [
   {
     id: 1,
-    title: "Coffee Shop Finder",
-    description: "A passion project helping coffee lovers discover local cafes and track their favorite brews",
-    imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800",
-    tags: ["React", "Node.js", "MongoDB"],
-    link: "https://github.com"
+    title: "Fuego App",
+    description: "Fuego is an app designed to unite dancers of all levels with partners, events and educational resources, creating a seamless and engaging dance community. Acting as both a social and learning hub, the app enables users to discover nearby dance events, access virtual lessons, share videos for constructive feedback and build personalized profiles to showcase their skills and interests.",
+    imageUrl: "../../assets/fuego.png",
+    tags: ["React Native", "TypeScript"],
+    link: "https://www.psu.edu/news/information-sciences-and-technology/story/app-connect-dancers-partners-and-resources-wins",
+    code: "https://github.com"
   },
   {
     id: 2,
-    title: "Photography Portfolio",
-    description: "A minimalist gallery showcasing my journey through street photography",
-    imageUrl: "https://images.unsplash.com/photo-1452780212940-6f5c0d14d848?auto=format&fit=crop&q=80&w=800",
-    tags: ["Next.js", "Tailwind", "Cloudinary"],
-    link: "https://github.com"
+    title: "Course Clarity",
+    description: "Course Clarity is a Retrieval-Augmented Generation (RAG) system that analyzes course syllabi to provide students with clear, concise summaries of course expectations, content structure, and workload. By using natural language processing and retrieval techniques, it helps students make more informed decisions during course selection.",
+    imageUrl: "https://miro.medium.com/v2/resize:fit:1400/1*MqiaQ3ydE_evyiSXtSR8pg.jpeg",
+    tags: ["Python", "Pinecone", "LangChain", "Gradio"],
+    code: "https://github.com"
   },
   {
     id: 3,
-    title: "Tech Book Club",
+    title: "Portfolio",
     description: "A community platform for developers to discuss and review programming books",
-    imageUrl: "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=800",
-    tags: ["React", "Firebase", "TypeScript"],
-    link: "https://github.com"
+    imageUrl: "../../assets/portfolio.png",
+    tags: ["React", "Tailwind CSS"],
+    link: "https://github.com",
+    code: ""
   }
 ];
 
-export const blogPosts = [
+export const hobbies = [
   {
     id: 1,
-    title: "Finding Balance: A Developer's Journey with Coffee and Code",
-    excerpt: "How my morning coffee ritual transformed my coding practice and helped me find work-life balance.",
-    content: "Lorem ipsum dolor sit amet...",
+    title: "Caliente Dance Company",
+    excerpt: "Penn State's Latin dance organization that celebrates the art and culture of Latin dance styles like salsa, bachata, and merengue. Through performances, workshops, and community events, Caliente brings together dancers of all levels to share their passion, energy, and love for Latin music and movement.",
     date: "2024-03-15",
-    imageUrl: "https://images.unsplash.com/photo-1459755486867-b55449bb39ff?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "../../assets/caliente.jpeg",
     tags: ["Lifestyle", "Programming"]
   },
   {
     id: 2,
-    title: "The Art of Street Photography: Lessons for Developers",
-    excerpt: "What capturing moments on the streets taught me about writing better code.",
+    title: "Hevy",
+    excerpt: "Hevy is a workout tracking app that helps me log my exercises, track progress, and stay organized at the gym. I use it to plan my workouts, monitor my personal records, and stay consistent with my fitness goals. It keeps me motivated by showing how much I’m improving over time.",
     content: "Lorem ipsum dolor sit amet...",
     date: "2024-03-10",
-    imageUrl: "https://images.unsplash.com/photo-1476900543704-4312b78632f8?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "https://play-lh.googleusercontent.com/AFo9TgMFYDN2K-vqtGPW0WEyGzfCNkpOSBl6fVMaPSDw6SQ3VdZ9k6YDv2lrp_zkOQzi=w3840-h2160-rw",
     tags: ["Photography", "Creative Process"]
-  }
-];
-
-export const contents = [
-  {
-    id: 1,
-    imageUrl: "https://images.unsplash.com/photo-1514539079130-25950c84af65?auto=format&fit=crop&q=80&w=800",
-    title: "Street Photography Guide",
-    category: "Photography",
-    description: "A comprehensive guide to capturing compelling street scenes",
-    date: "2024-03-01",
-    link: "/guides/street-photography"
-  },
-  {
-    id: 2,
-    imageUrl: "https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&q=80&w=800",
-    title: "Architecture Design Patterns",
-    category: "Design",
-    description: "Exploring common patterns in modern architecture",
-    date: "2024-02-15",
-    link: "/guides/architecture"
-  },
-  {
-    id: 3,
-    imageUrl: "https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&q=80&w=800",
-    title: "Coffee Brewing Techniques",
-    category: "Lifestyle",
-    description: "Master the art of brewing the perfect cup",
-    date: "2024-02-01",
-    link: "/guides/coffee"
-  },
-  {
-    id: 4,
-    imageUrl: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80&w=800",
-    title: "Urban Photography Tips",
-    category: "Photography",
-    description: "Tips and tricks for urban photography",
-    date: "2024-01-20",
-    link: "/guides/urban-photography"
-  },
-  {
-    id: 5,
-    imageUrl: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=800",
-    title: "Night Photography Essentials",
-    category: "Photography",
-    description: "Master the art of night photography",
-    date: "2024-01-10",
-    link: "/guides/night-photography"
-  },
-  {
-    id: 6,
-    imageUrl: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800",
-    title: "Coffee Shop Reviews",
-    category: "Lifestyle",
-    description: "Reviews of the best coffee shops in San Francisco",
-    date: "2024-01-05",
-    link: "/reviews/coffee-shops"
   }
 ];

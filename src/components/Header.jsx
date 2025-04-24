@@ -19,11 +19,7 @@ const Header = () => {
             </a>
             <a href="#blog" className="flex items-center gap-2 text-amaranth">
               <Pen size={18} />
-              <span>Writing</span>
-            </a>
-            <a href="#photography" className="flex items-center gap-2 text-amaranth">
-              <Camera size={18} />
-              <span>Photos</span>
+              <span>Blog</span>
             </a>
             <a href="#contact" className="px-4 py-2 bg-amber-100 text-amaranth rounded-lg">
               Say Hello
@@ -49,11 +45,7 @@ const Header = () => {
               </a>
               <a href="#blog" className="flex items-center gap-2 px-3 py-2 text-gray-600 hover:text-amber-600">
                 <Pen size={18} />
-                <span>Writing</span>
-              </a>
-              <a href="#photography" className="flex items-center gap-2 px-3 py-2 text-gray-600 hover:text-amber-600">
-                <Camera size={18} />
-                <span>Photos</span>
+                <span>Blog</span>
               </a>
               <a href="#contact" className="block px-3 py-2 text-amber-600 font-medium">
                 Say Hello

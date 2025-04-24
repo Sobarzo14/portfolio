@@ -1,5 +1,5 @@
 import React from 'react';
-import { blogPosts } from '../data';
+import { hobbies } from '../data';
 import { Calendar, Tag } from 'lucide-react';
 
 const Blog = () => {
@@ -8,7 +8,7 @@ const Blog = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Latest Blog Posts</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {blogPosts.map((post) => (
+          {hobbies.map((post) => (
             <article key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img
                 src={post.imageUrl}
